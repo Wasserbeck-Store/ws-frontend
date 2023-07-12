@@ -8,6 +8,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from "@mui/material/InputBase";
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Margin } from "@mui/icons-material";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import logo from './W.PNG'
 
 
 function Navbar() {
@@ -16,14 +20,7 @@ function Navbar() {
         <AppBar position="static">
             <Toolbar >
                 {/*Left Side of Nav Bar*/}
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                >
-                    <MenuIcon />
-                </IconButton>
+                <img src={logo} alt="logo" style={{width:'30px', height:'30px', marginRight:'5px'}}/>
                 <Typography
                     variant="h6"
                     noWrap
@@ -32,20 +29,23 @@ function Navbar() {
                     Example Store
                 </Typography>
                 <Input
+                    color="secondary"
                     id="input-with-icon-adornment"
                     startAdornment={
                         <InputAdornment position="start">
                             <SearchIcon />
                         </InputAdornment>
                     }
-                    sx={{marginLeft:2}}
+                    sx={{ marginLeft: 2 }}
                 />
                 <Box sx={{ flexGrow: 1 }} />
 
                 {/*End of Nav Bar*/}
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-
-                    <AccountCircle />
+                    <FavoriteBorderIcon sx={{ marginLeft: '15px' }} />
+                    <LocalShippingIcon sx={{ marginLeft: '15px' }} />
+                    <AccountCircle sx={{ marginLeft: '15px' }} />
+                    <ShoppingCartIcon sx={{ marginLeft: '15px' }} />
 
                 </Box>
 
