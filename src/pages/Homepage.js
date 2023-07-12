@@ -1,11 +1,13 @@
 import { Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
+import Salecard from "../components/SaleCard";
 
 function Homepage() {
   return (
     <div>
       <Navbar></Navbar>
-      <Typography>This goes under</Typography>  
+      <Salecard></Salecard>  
+      <Salecard></Salecard>
     </div>
     
   );
