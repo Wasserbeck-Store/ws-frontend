@@ -10,7 +10,7 @@ function Salecard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="140px"
           image={logo}
           alt="W"
           sx={{objectFit:"contain"}}
