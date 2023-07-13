@@ -4,7 +4,7 @@ import EastIcon from '@mui/icons-material/East';
 
 function Categorydisplay() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', padding: '20px',alignItems:'center', width:'100%'}}>
+        <div style={{ display: 'flex', flexDirection: 'column', padding: '20px',alignItems:'center'}}>
             <div style={{display:'flex', flexDirection:'row',width:'70%', justifyContent:'space-between'}}>
                 <Typography variant="h3" >Category Name</Typography>
                 <Button variant="text" size="large" endIcon={<EastIcon/>} >See All</Button>
