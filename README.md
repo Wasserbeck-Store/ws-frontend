@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Installation and Setup
+
+To get started you need to make sure you have [node.js](https://nodejs.org/en/download/current) intsalled. 
+
+Once Node is installed you just need to run :
+### `npm intsall`
+This will install all of the dependancies.
+
+### `npm start`
+This will Start the App on your local Machine!
+Just Type http:localhost:3000 into your broweser if node doesnt auto open the site in your browser.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
