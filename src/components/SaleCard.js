@@ -4,10 +4,11 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import logo from "./W.PNG"
 
 
-function Salecard({title}) {
+function Salecard({title, ...rest}) {
   return (
     <Card sx={{ maxWidth: 320, margin:'10px'}}>
-      <CardActionArea>
+      <CardActionArea {...rest}>
+
         <CardMedia
           component="img"
           height="140px"

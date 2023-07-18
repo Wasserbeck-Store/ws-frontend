@@ -3,6 +3,9 @@ import { Typography ,Button} from "@mui/material";
 import EastIcon from '@mui/icons-material/East';
 
 function Categorydisplay({category}) {
+    const handleClick = () => {
+        console.log("This will Navigate to the product Page");
+    };
     return (
         <div style={{ display: 'flex', flexDirection: 'column', padding: '20px',alignItems:'center'}}>
             <div style={{display:'flex', flexDirection:'row',width:'70%', justifyContent:'space-between'}}>
@@ -11,7 +14,7 @@ function Categorydisplay({category}) {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
-                <Salecard title="Leather Wallet"/>
+                <Salecard title="Leather Wallet" onClick={handleClick}/>
                 <Salecard title="Leather Wallet"/>
                 <Salecard title="Leather Wallet"/>
                 <Salecard title="Leather Wallet"/>
