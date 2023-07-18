@@ -2,19 +2,19 @@ import Salecard from "./SaleCard";
 import { Typography ,Button} from "@mui/material";
 import EastIcon from '@mui/icons-material/East';
 
-function Categorydisplay() {
+function Categorydisplay({category}) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', padding: '20px',alignItems:'center'}}>
             <div style={{display:'flex', flexDirection:'row',width:'70%', justifyContent:'space-between'}}>
-                <Typography variant="h3" >Category Name</Typography>
+                <Typography variant="h3" >{category}</Typography>
                 <Button variant="text" size="large" endIcon={<EastIcon/>} >See All</Button>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
-                <Salecard />
-                <Salecard />
-                <Salecard />
-                <Salecard />
+                <Salecard title="Leather Wallet"/>
+                <Salecard title="Leather Wallet"/>
+                <Salecard title="Leather Wallet"/>
+                <Salecard title="Leather Wallet"/>
             </div>
 
         </div>

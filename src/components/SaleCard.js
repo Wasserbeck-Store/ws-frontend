@@ -4,7 +4,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import logo from "./W.PNG"
 
 
-function Salecard() {
+function Salecard({title}) {
   return (
     <Card sx={{ maxWidth: 320, margin:'10px'}}>
       <CardActionArea>
@@ -17,7 +17,7 @@ function Salecard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Leather Wallet
+            {title}
           </Typography>
           <Chip avatar={<AttachMoneyIcon/>} label="20.00" size="small" variant="outlined"/>
           <Typography variant="body2" color="text.secondary">
