@@ -1,6 +1,8 @@
 import Salecard from "./SaleCard";
 import { Typography ,Button} from "@mui/material";
 import EastIcon from '@mui/icons-material/East';
+import { Link } from "react-router-dom";
+
 
 function Categorydisplay({category}) {
     const handleClick = () => {
@@ -14,10 +16,10 @@ function Categorydisplay({category}) {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
-                <Salecard title="Leather Wallet" onClick={handleClick}/>
-                <Salecard title="Leather Wallet"/>
-                <Salecard title="Leather Wallet"/>
-                <Salecard title="Leather Wallet"/>
+                <Salecard title="Leather Wallet" component={Link} to="/product" onClick={handleClick}/>
+                <Salecard title="Leather Wallet" component={Link} to="/product"/>
+                <Salecard title="Leather Wallet" component={Link} to="/product"/>
+                <Salecard title="Leather Wallet" component={Link} to="/product"/>
             </div>
 
         </div>
