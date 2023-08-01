@@ -47,10 +47,31 @@ function Navbar() {
 
                     {/*End of Nav Bar*/}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <FavoriteBorderIcon sx={{ marginLeft: '15px' }} />
-                        <LocalShippingIcon sx={{ marginLeft: '15px' }} />
-                        <AccountCircle sx={{ marginLeft: '15px' }} />
-                        <ShoppingCartIcon sx={{ marginLeft: '15px' }} />
+                        <Link to="favorites">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }}>
+                                <FavoriteBorderIcon />
+                            </IconButton>
+                        </Link>
+
+                        <Link to="orders">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }}>
+                                <LocalShippingIcon />
+                            </IconButton>
+                        </Link>
+
+                        <Link to="account">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }} >
+                                <AccountCircle />
+                            </IconButton>
+                        </Link>
+
+                        <Link to="cart">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }} >
+                                <ShoppingCartIcon />
+                            </IconButton>
+                        </Link>
+
+
 
                     </Box>
 
