@@ -12,45 +12,75 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from './W.PNG'
+import { Outlet, Link } from "react-router-dom";
 
 
 function Navbar() {
 
     return (
-        <AppBar position="static">
-            <Toolbar >
-                {/*Left Side of Nav Bar*/}
-                <img src={logo} alt="logo" style={{width:'30px', height:'30px', marginRight:'5px'}}/>
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                >
-                    Example Store
-                </Typography>
-                <Input
-                    color="secondary"
-                    id="input-with-icon-adornment"
-                    startAdornment={
-                        <InputAdornment position="start">
-                            <SearchIcon />
-                        </InputAdornment>
-                    }
-                    sx={{ marginLeft: 2 }}
-                />
-                <Box sx={{ flexGrow: 1 }} />
+        <>
+            <AppBar position="static">
+                <Toolbar >
+                    {/*Left Side of Nav Bar*/}
+                    <Link to="/">
+                        <img src={logo} alt="logo" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
+                    </Link>
 
-                {/*End of Nav Bar*/}
-                <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                    <FavoriteBorderIcon sx={{ marginLeft: '15px' }} />
-                    <LocalShippingIcon sx={{ marginLeft: '15px' }} />
-                    <AccountCircle sx={{ marginLeft: '15px' }} />
-                    <ShoppingCartIcon sx={{ marginLeft: '15px' }} />
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="div"
+                    >
+                        Example Store
+                    </Typography>
+                    <Input
+                        color="secondary"
+                        id="input-with-icon-adornment"
+                        startAdornment={
+                            <InputAdornment position="start">
+                                <SearchIcon />
+                            </InputAdornment>
+                        }
+                        sx={{ marginLeft: 2 }}
+                    />
+                    <Box sx={{ flexGrow: 1 }} />
 
-                </Box>
+                    {/*End of Nav Bar*/}
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <Link to="favorites">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }}>
+                                <FavoriteBorderIcon />
+                            </IconButton>
+                        </Link>
 
-            </Toolbar>
-        </AppBar>
+                        <Link to="orders">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }}>
+                                <LocalShippingIcon />
+                            </IconButton>
+                        </Link>
+
+                        <Link to="account">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }} >
+                                <AccountCircle />
+                            </IconButton>
+                        </Link>
+
+                        <Link to="cart">
+                            <IconButton color="secondary" sx={{ marginLeft: '5px' }} >
+                                <ShoppingCartIcon />
+                            </IconButton>
+                        </Link>
+
+
+
+                    </Box>
+
+                </Toolbar>
+            </AppBar>
+
+            <Outlet />
+
+        </>
     );
 }
 
