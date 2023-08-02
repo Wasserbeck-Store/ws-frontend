@@ -15,7 +15,7 @@ function Categorydisplay({category}) {
                 <Button variant="text" size="large" endIcon={<EastIcon/>} >See All</Button>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 <Salecard title="Leather Wallet" component={Link} to="/product" onClick={handleClick}/>
                 <Salecard title="Leather Wallet" component={Link} to="/product"/>
                 <Salecard title="Leather Wallet" component={Link} to="/product"/>
