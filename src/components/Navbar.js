@@ -20,8 +20,8 @@ function Navbar() {
     return (
         <>
             <AppBar position="static">
-                <Toolbar >
-                    {/*Left Side of Nav Bar*/}
+                <Toolbar sx={{display: "flex", justifyContent:'space-between'}}>
+                    <div style={{display:"flex"}}>
                     <Link to="/">
                         <img src={logo} alt="logo" style={{ width: '30px', height: '30px', marginRight: '5px' }} />
                     </Link>
@@ -33,6 +33,10 @@ function Navbar() {
                     >
                         Example Store
                     </Typography>
+
+                    </div>
+                    {/*Left Side of Nav Bar*/}
+           
                     <Input
                         color="secondary"
                         id="input-with-icon-adornment"
@@ -41,11 +45,14 @@ function Navbar() {
                                 <SearchIcon />
                             </InputAdornment>
                         }
-                        sx={{ marginLeft: 2 }}
+                        sx={{flex:'0 1 500px'}}
+                        
                     />
-                    <Box sx={{ flexGrow: 1 }} />
+                   
 
                     {/*End of Nav Bar*/}
+
+                    
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <Link to="favorites">
                             <IconButton color="secondary" sx={{ marginLeft: '5px' }}>
