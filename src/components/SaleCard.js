@@ -3,16 +3,17 @@ import {Card, CardContent, CardMedia, CardActionArea, Chip} from "@mui/material"
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import logo from "./W.PNG"
 
+function Salecard({title, overrideLogo, ...rest}) {
 
-function Salecard({title, ...rest}) {
+  
   return (
     <Card sx={{ maxWidth: 320, margin:'10px'}}>
-      <CardActionArea {...rest}>
+      <CardActionArea {...rest} >
 
         <CardMedia
           component="img"
           height="140px"
-          image={logo}
+          image={overrideLogo || logo}
           alt="W"
           sx={{objectFit:"contain"}}
         />
