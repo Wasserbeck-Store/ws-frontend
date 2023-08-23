@@ -21,7 +21,7 @@ function Homepage() {
         <Typography variant="h3">{response}</Typography>
       </div>
       <div>
-        <Categorydisplay category="Popular Items"></Categorydisplay>
+        {/* <Categorydisplay category="Popular Items"></Categorydisplay> */}
         <Categorydisplay category="Leather Work"></Categorydisplay>
         <Categorydisplay category="D&D Minis"></Categorydisplay>
         <Categorydisplay category="3D Prints"></Categorydisplay>

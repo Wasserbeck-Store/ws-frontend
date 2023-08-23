@@ -2,11 +2,30 @@ import { Typography } from "@mui/material";
 import {Card, CardContent, CardMedia, CardActionArea, Chip} from "@mui/material";
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import logo from "./W.PNG"
+import axios from "axios";
+import React, { useEffect, useState } from 'react';
 
-function Salecard({title, overrideLogo, ...rest}) {
+function Salecard({title, overrideLogo, category, id, ...rest}) {
+  const [description, setDescription] = useState("")
+  const [name, setName] = useState("")
+  const [price, setPrice] = useState("")
 
+  useEffect(() => {
+    const getProduct = async () => {
+      const request = await axios.get("http://localhost:8888/product?id=" + id + "&category=" + category.replace("&","%26"))
+      console.log(request.data)
+      setDescription(request.data.description)
+      setName(request.data.name)
+      setPrice(request.data.price)
+    }
+    getProduct()
+  },[]
+  
+  )
+  
   
   return (
+    
     <Card sx={{ maxWidth: 320, margin:'10px'}}>
       <CardActionArea {...rest} >
 
@@ -19,11 +38,11 @@ function Salecard({title, overrideLogo, ...rest}) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {title}
+            {name}
           </Typography>
-          <Chip avatar={<AttachMoneyIcon/>} label="20.00" size="small" variant="outlined"/>
+          <Chip avatar={<AttachMoneyIcon/>} label={price} size="small" variant="outlined"/>
           <Typography variant="body2" color="text.secondary">
-            This is a wallet made of leather. You can tell its made of leather by the way its made of leather. The leather wallet knows its made of leather by the way it feels like leather.
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>

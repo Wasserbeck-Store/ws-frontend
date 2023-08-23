@@ -16,10 +16,10 @@ function Categorydisplay({category}) {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                <Salecard title="Leather Wallet" component={Link} to="/product" onClick={handleClick}/>
-                <Salecard title="Leather Wallet" component={Link} to="/product"/>
-                <Salecard title="Leather Wallet" component={Link} to="/product"/>
-                <Salecard title="Leather Wallet" component={Link} to="/product"/>
+                <Salecard category={category} id="000" component={Link} to="/product" onClick={handleClick}/>
+                <Salecard category={category} id="001" component={Link} to="/product"/>
+                <Salecard  category={category} id="002" component={Link} to="/product"/>
+                <Salecard  category={category} id="003" component={Link} to="/product"/>
             </div>
 
         </div>
