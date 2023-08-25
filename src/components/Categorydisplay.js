@@ -12,7 +12,7 @@ function Categorydisplay({category}) {
         <div style={{ display: 'flex', flexDirection: 'column', padding: '20px',alignItems:'center'}}>
             <div style={{display:'flex', flexDirection:'row',width:'70%', justifyContent:'space-between'}}>
                 <Typography variant="h3" >{category}</Typography>
-                <Button variant="text" size="large" component={Link} to="/category" endIcon={<EastIcon/>} >See All</Button>
+                <Button variant="text" size="large" component={Link} to='/category' state={{category: category}} endIcon={<EastIcon/>} >See All</Button>
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
