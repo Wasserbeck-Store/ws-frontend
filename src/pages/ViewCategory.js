@@ -24,18 +24,46 @@ function ViewCategory() {
         <Typography variant="h3" >Category Name</Typography>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 10% 0 10%', flexWrap: 'wrap' }}>
-        <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
-        <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
+        </div>
+
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
+        </div>
+
+
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="000" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="001" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="002" component={Link} to="/product" />
+        </div>
+        <div style={{ marginBottom: '45px' }}>
+          <Salecard category={"Leather Work"} id="003" component={Link} to="/product" />
+        </div>
+       
 
       </div>
 
