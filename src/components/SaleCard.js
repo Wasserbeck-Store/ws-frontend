@@ -4,6 +4,8 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import logo from "./W.PNG"
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
+import { BASE_IP } from '../constants';
+
 
 function Salecard({title, overrideLogo, category, id, ...rest}) {
   const [description, setDescription] = useState("")
@@ -12,7 +14,7 @@ function Salecard({title, overrideLogo, category, id, ...rest}) {
 
   useEffect(() => {
     const getProduct = async () => {
-      const request = await axios.get("http://localhost:8888/product?id=" + id + "&category=" + category.replace("&","%26"))
+      const request = await axios.get(BASE_IP + "product?id=" + id + "&category=" + category.replace("&","%26"))
       console.log(request.data)
       setDescription(request.data.description)
       setName(request.data.name)

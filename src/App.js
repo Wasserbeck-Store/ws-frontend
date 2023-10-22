@@ -9,6 +9,8 @@ import Cartpage from "./pages/Cartpage";
 import Accountpage from "./pages/Accountpage";
 import Orderspage from "./pages/Orderspage";
 import Favoritespage from "./pages/Favoritespage";
+import ViewCategory from "./pages/ViewCategory";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path="account" element={<Accountpage />} />
             <Route path="orders" element={<Orderspage />} />
             <Route path="favorites" element={<Favoritespage />} />
+            <Route path="category" element={<ViewCategory />}/>
  
           </Route>
         </Routes>

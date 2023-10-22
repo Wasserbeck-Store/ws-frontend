@@ -4,12 +4,14 @@ import Salecard from "../components/SaleCard";
 import Categorydisplay from "../components/Categorydisplay";
 import axios from "axios";
 import React, { useState } from 'react';
+import { BASE_IP } from '../constants';
+
 
 function Homepage() {
   const [response, setResponse] = useState("")
 
   const getTest = async () => {
-    const request = await axios.get('http://localhost:8888/')
+    const request = await axios.get(BASE_IP)
     console.log(request.data.text)
     setResponse(request.data.text)
   }
