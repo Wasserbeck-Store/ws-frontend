@@ -5,6 +5,7 @@ import Categorydisplay from "../components/Categorydisplay";
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { BASE_IP } from "../constants";
 
 
 function ViewCategory() {
@@ -16,7 +17,7 @@ function ViewCategory() {
 
   useEffect(() => {
     const getProducts = async () => {
-      const request = await axios.get("http://localhost:8888/categoryProducts?category=" + category.replace("&","%26"))
+      const request = await axios.get(BASE_IP + "categoryProducts?category=" + category.replace("&","%26"))
       console.log(request.data)
       setProducts(Object.keys(request.data))
 
